@@ -1,18 +1,23 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  Rendezvous
 //
-//  Created by Benjamin sharf on 6/27/16.
-//  Copyright © 2016 Benjamin sharf. All rights reserved.
+//  Created by Laura Wandres on 6/27/16.
+//  Copyright © 2016 Laura Wandres. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class RegViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func regsubmitButtonPressed(sender: UIButton) {
+        performSegueWithIdentifier("gotoSettingsSegue",sender: UIButton.self)
+        
     }
 
     override func didReceiveMemoryWarning() {

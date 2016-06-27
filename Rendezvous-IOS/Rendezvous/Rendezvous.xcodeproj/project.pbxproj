@@ -8,13 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		698203DA1D219753002CB45E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698203D91D219753002CB45E /* AppDelegate.swift */; };
-		698203DC1D219753002CB45E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698203DB1D219753002CB45E /* ViewController.swift */; };
+		698203DC1D219753002CB45E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698203DB1D219753002CB45E /* LoginViewController.swift */; };
 		698203DF1D219753002CB45E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698203DD1D219753002CB45E /* Main.storyboard */; };
 		698203E21D219753002CB45E /* Rendezvous.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 698203E01D219753002CB45E /* Rendezvous.xcdatamodeld */; };
 		698203E41D219753002CB45E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698203E31D219753002CB45E /* Assets.xcassets */; };
 		698203E71D219753002CB45E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698203E51D219753002CB45E /* LaunchScreen.storyboard */; };
 		698203F21D219753002CB45E /* RendezvousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698203F11D219753002CB45E /* RendezvousTests.swift */; };
 		698203FD1D219753002CB45E /* RendezvousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698203FC1D219753002CB45E /* RendezvousUITests.swift */; };
+		AF3085A51D21A956002CC24A /* VisibilityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3085A41D21A956002CC24A /* VisibilityCell.swift */; };
+		AF3085A91D21A9E7002CC24A /* mayKnowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3085A81D21A9E7002CC24A /* mayKnowCell.swift */; };
+		AF3085AB1D21ABCD002CC24A /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3085AA1D21ABCD002CC24A /* RegViewController.swift */; };
+		AF3085AD1D21AC93002CC24A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3085AC1D21AC93002CC24A /* HomeViewController.swift */; };
+		AF3085AF1D21ACC7002CC24A /* ActivityLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3085AE1D21ACC7002CC24A /* ActivityLogViewController.swift */; };
+		AF3085B11D21ACFD002CC24A /* HomeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3085B01D21ACFD002CC24A /* HomeSettingsViewController.swift */; };
+		AF3085B31D21AD21002CC24A /* MayKnowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3085B21D21AD21002CC24A /* MayKnowViewController.swift */; };
+		AF3085B51D21AD34002CC24A /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3085B41D21AD34002CC24A /* InviteViewController.swift */; };
+		AF3085B71D21AD46002CC24A /* VisitSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3085B61D21AD46002CC24A /* VisitSettingsViewController.swift */; };
+		AF3085B91D21AD5D002CC24A /* VisibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3085B81D21AD5D002CC24A /* VisibilityViewController.swift */; };
+		AF3085BB1D21B7A3002CC24A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3085BA1D21B7A3002CC24A /* CoreData.framework */; };
+		AF3085BD1D21B7AD002CC24A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3085BC1D21B7AD002CC24A /* CoreLocation.framework */; };
+		AF3085BF1D21B7BC002CC24A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3085BE1D21B7BC002CC24A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +50,7 @@
 /* Begin PBXFileReference section */
 		698203D61D219753002CB45E /* Rendezvous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rendezvous.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		698203D91D219753002CB45E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		698203DB1D219753002CB45E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		698203DB1D219753002CB45E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		698203DE1D219753002CB45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		698203E11D219753002CB45E /* Rendezvous.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rendezvous.xcdatamodel; sourceTree = "<group>"; };
 		698203E31D219753002CB45E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +62,19 @@
 		698203F81D219753002CB45E /* RendezvousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RendezvousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		698203FC1D219753002CB45E /* RendezvousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezvousUITests.swift; sourceTree = "<group>"; };
 		698203FE1D219753002CB45E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF3085A41D21A956002CC24A /* VisibilityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibilityCell.swift; sourceTree = "<group>"; };
+		AF3085A81D21A9E7002CC24A /* mayKnowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mayKnowCell.swift; sourceTree = "<group>"; };
+		AF3085AA1D21ABCD002CC24A /* RegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
+		AF3085AC1D21AC93002CC24A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AF3085AE1D21ACC7002CC24A /* ActivityLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityLogViewController.swift; sourceTree = "<group>"; };
+		AF3085B01D21ACFD002CC24A /* HomeSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSettingsViewController.swift; sourceTree = "<group>"; };
+		AF3085B21D21AD21002CC24A /* MayKnowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MayKnowViewController.swift; sourceTree = "<group>"; };
+		AF3085B41D21AD34002CC24A /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
+		AF3085B61D21AD46002CC24A /* VisitSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitSettingsViewController.swift; sourceTree = "<group>"; };
+		AF3085B81D21AD5D002CC24A /* VisibilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibilityViewController.swift; sourceTree = "<group>"; };
+		AF3085BA1D21B7A3002CC24A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AF3085BC1D21B7AD002CC24A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF3085BE1D21B7BC002CC24A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3085BF1D21B7BC002CC24A /* MapKit.framework in Frameworks */,
+				AF3085BD1D21B7AD002CC24A /* CoreLocation.framework in Frameworks */,
+				AF3085BB1D21B7A3002CC24A /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +108,9 @@
 		698203CD1D219753002CB45E = {
 			isa = PBXGroup;
 			children = (
+				AF3085BE1D21B7BC002CC24A /* MapKit.framework */,
+				AF3085BC1D21B7AD002CC24A /* CoreLocation.framework */,
+				AF3085BA1D21B7A3002CC24A /* CoreData.framework */,
 				698203D81D219753002CB45E /* Rendezvous */,
 				698203F01D219753002CB45E /* RendezvousTests */,
 				698203FB1D219753002CB45E /* RendezvousUITests */,
@@ -100,12 +132,22 @@
 			isa = PBXGroup;
 			children = (
 				698203D91D219753002CB45E /* AppDelegate.swift */,
-				698203DB1D219753002CB45E /* ViewController.swift */,
+				698203DB1D219753002CB45E /* LoginViewController.swift */,
+				AF3085B61D21AD46002CC24A /* VisitSettingsViewController.swift */,
+				AF3085B81D21AD5D002CC24A /* VisibilityViewController.swift */,
+				AF3085B41D21AD34002CC24A /* InviteViewController.swift */,
+				AF3085B21D21AD21002CC24A /* MayKnowViewController.swift */,
+				AF3085B01D21ACFD002CC24A /* HomeSettingsViewController.swift */,
+				AF3085AA1D21ABCD002CC24A /* RegViewController.swift */,
+				AF3085AE1D21ACC7002CC24A /* ActivityLogViewController.swift */,
+				AF3085AC1D21AC93002CC24A /* HomeViewController.swift */,
+				AF3085A41D21A956002CC24A /* VisibilityCell.swift */,
 				698203DD1D219753002CB45E /* Main.storyboard */,
 				698203E31D219753002CB45E /* Assets.xcassets */,
 				698203E51D219753002CB45E /* LaunchScreen.storyboard */,
 				698203E81D219753002CB45E /* Info.plist */,
 				698203E01D219753002CB45E /* Rendezvous.xcdatamodeld */,
+				AF3085A81D21A9E7002CC24A /* mayKnowCell.swift */,
 			);
 			path = Rendezvous;
 			sourceTree = "<group>";
@@ -259,9 +301,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3085AF1D21ACC7002CC24A /* ActivityLogViewController.swift in Sources */,
+				AF3085B71D21AD46002CC24A /* VisitSettingsViewController.swift in Sources */,
+				AF3085A91D21A9E7002CC24A /* mayKnowCell.swift in Sources */,
 				698203E21D219753002CB45E /* Rendezvous.xcdatamodeld in Sources */,
-				698203DC1D219753002CB45E /* ViewController.swift in Sources */,
+				AF3085B51D21AD34002CC24A /* InviteViewController.swift in Sources */,
+				AF3085B31D21AD21002CC24A /* MayKnowViewController.swift in Sources */,
+				AF3085AD1D21AC93002CC24A /* HomeViewController.swift in Sources */,
+				698203DC1D219753002CB45E /* LoginViewController.swift in Sources */,
+				AF3085B11D21ACFD002CC24A /* HomeSettingsViewController.swift in Sources */,
 				698203DA1D219753002CB45E /* AppDelegate.swift in Sources */,
+				AF3085A51D21A956002CC24A /* VisibilityCell.swift in Sources */,
+				AF3085B91D21AD5D002CC24A /* VisibilityViewController.swift in Sources */,
+				AF3085AB1D21ABCD002CC24A /* RegViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +540,7 @@
 				698204031D219753002CB45E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		698204041D219753002CB45E /* Build configuration list for PBXNativeTarget "RendezvousTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +549,7 @@
 				698204061D219753002CB45E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		698204071D219753002CB45E /* Build configuration list for PBXNativeTarget "RendezvousUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +558,7 @@
 				698204091D219753002CB45E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
