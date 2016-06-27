@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		698203DA1D219753002CB45E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698203D91D219753002CB45E /* AppDelegate.swift */; };
+		698203DC1D219753002CB45E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698203DB1D219753002CB45E /* ViewController.swift */; };
+		698203DF1D219753002CB45E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698203DD1D219753002CB45E /* Main.storyboard */; };
+		698203E21D219753002CB45E /* Rendezvous.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 698203E01D219753002CB45E /* Rendezvous.xcdatamodeld */; };
+		698203E41D219753002CB45E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698203E31D219753002CB45E /* Assets.xcassets */; };
+		698203E71D219753002CB45E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698203E51D219753002CB45E /* LaunchScreen.storyboard */; };
+		698203F21D219753002CB45E /* RendezvousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698203F11D219753002CB45E /* RendezvousTests.swift */; };
+		698203FD1D219753002CB45E /* RendezvousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698203FC1D219753002CB45E /* RendezvousUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		698203EE1D219753002CB45E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 698203CE1D219753002CB45E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 698203D51D219753002CB45E;
+			remoteInfo = Rendezvous;
+		};
+		698203F91D219753002CB45E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 698203CE1D219753002CB45E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 698203D51D219753002CB45E;
+			remoteInfo = Rendezvous;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		698203D61D219753002CB45E /* Rendezvous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rendezvous.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		698203D91D219753002CB45E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		698203DB1D219753002CB45E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		698203DE1D219753002CB45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		698203E11D219753002CB45E /* Rendezvous.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rendezvous.xcdatamodel; sourceTree = "<group>"; };
+		698203E31D219753002CB45E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		698203E61D219753002CB45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		698203E81D219753002CB45E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		698203ED1D219753002CB45E /* RendezvousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RendezvousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		698203F11D219753002CB45E /* RendezvousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezvousTests.swift; sourceTree = "<group>"; };
+		698203F31D219753002CB45E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		698203F81D219753002CB45E /* RendezvousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RendezvousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		698203FC1D219753002CB45E /* RendezvousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezvousUITests.swift; sourceTree = "<group>"; };
+		698203FE1D219753002CB45E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		698203D31D219753002CB45E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698203EA1D219753002CB45E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698203F51D219753002CB45E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		698203CD1D219753002CB45E = {
+			isa = PBXGroup;
+			children = (
+				698203D81D219753002CB45E /* Rendezvous */,
+				698203F01D219753002CB45E /* RendezvousTests */,
+				698203FB1D219753002CB45E /* RendezvousUITests */,
+				698203D71D219753002CB45E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		698203D71D219753002CB45E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				698203D61D219753002CB45E /* Rendezvous.app */,
+				698203ED1D219753002CB45E /* RendezvousTests.xctest */,
+				698203F81D219753002CB45E /* RendezvousUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		698203D81D219753002CB45E /* Rendezvous */ = {
+			isa = PBXGroup;
+			children = (
+				698203D91D219753002CB45E /* AppDelegate.swift */,
+				698203DB1D219753002CB45E /* ViewController.swift */,
+				698203DD1D219753002CB45E /* Main.storyboard */,
+				698203E31D219753002CB45E /* Assets.xcassets */,
+				698203E51D219753002CB45E /* LaunchScreen.storyboard */,
+				698203E81D219753002CB45E /* Info.plist */,
+				698203E01D219753002CB45E /* Rendezvous.xcdatamodeld */,
+			);
+			path = Rendezvous;
+			sourceTree = "<group>";
+		};
+		698203F01D219753002CB45E /* RendezvousTests */ = {
+			isa = PBXGroup;
+			children = (
+				698203F11D219753002CB45E /* RendezvousTests.swift */,
+				698203F31D219753002CB45E /* Info.plist */,
+			);
+			path = RendezvousTests;
+			sourceTree = "<group>";
+		};
+		698203FB1D219753002CB45E /* RendezvousUITests */ = {
+			isa = PBXGroup;
+			children = (
+				698203FC1D219753002CB45E /* RendezvousUITests.swift */,
+				698203FE1D219753002CB45E /* Info.plist */,
+			);
+			path = RendezvousUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		698203D51D219753002CB45E /* Rendezvous */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 698204011D219753002CB45E /* Build configuration list for PBXNativeTarget "Rendezvous" */;
+			buildPhases = (
+				698203D21D219753002CB45E /* Sources */,
+				698203D31D219753002CB45E /* Frameworks */,
+				698203D41D219753002CB45E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rendezvous;
+			productName = Rendezvous;
+			productReference = 698203D61D219753002CB45E /* Rendezvous.app */;
+			productType = "com.apple.product-type.application";
+		};
+		698203EC1D219753002CB45E /* RendezvousTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 698204041D219753002CB45E /* Build configuration list for PBXNativeTarget "RendezvousTests" */;
+			buildPhases = (
+				698203E91D219753002CB45E /* Sources */,
+				698203EA1D219753002CB45E /* Frameworks */,
+				698203EB1D219753002CB45E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				698203EF1D219753002CB45E /* PBXTargetDependency */,
+			);
+			name = RendezvousTests;
+			productName = RendezvousTests;
+			productReference = 698203ED1D219753002CB45E /* RendezvousTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		698203F71D219753002CB45E /* RendezvousUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 698204071D219753002CB45E /* Build configuration list for PBXNativeTarget "RendezvousUITests" */;
+			buildPhases = (
+				698203F41D219753002CB45E /* Sources */,
+				698203F51D219753002CB45E /* Frameworks */,
+				698203F61D219753002CB45E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				698203FA1D219753002CB45E /* PBXTargetDependency */,
+			);
+			name = RendezvousUITests;
+			productName = RendezvousUITests;
+			productReference = 698203F81D219753002CB45E /* RendezvousUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		698203CE1D219753002CB45E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Benjamin sharf";
+				TargetAttributes = {
+					698203D51D219753002CB45E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					698203EC1D219753002CB45E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 698203D51D219753002CB45E;
+					};
+					698203F71D219753002CB45E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 698203D51D219753002CB45E;
+					};
+				};
+			};
+			buildConfigurationList = 698203D11D219753002CB45E /* Build configuration list for PBXProject "Rendezvous" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 698203CD1D219753002CB45E;
+			productRefGroup = 698203D71D219753002CB45E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				698203D51D219753002CB45E /* Rendezvous */,
+				698203EC1D219753002CB45E /* RendezvousTests */,
+				698203F71D219753002CB45E /* RendezvousUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		698203D41D219753002CB45E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				698203E71D219753002CB45E /* LaunchScreen.storyboard in Resources */,
+				698203E41D219753002CB45E /* Assets.xcassets in Resources */,
+				698203DF1D219753002CB45E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698203EB1D219753002CB45E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698203F61D219753002CB45E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		698203D21D219753002CB45E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				698203E21D219753002CB45E /* Rendezvous.xcdatamodeld in Sources */,
+				698203DC1D219753002CB45E /* ViewController.swift in Sources */,
+				698203DA1D219753002CB45E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698203E91D219753002CB45E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				698203F21D219753002CB45E /* RendezvousTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		698203F41D219753002CB45E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				698203FD1D219753002CB45E /* RendezvousUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		698203EF1D219753002CB45E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 698203D51D219753002CB45E /* Rendezvous */;
+			targetProxy = 698203EE1D219753002CB45E /* PBXContainerItemProxy */;
+		};
+		698203FA1D219753002CB45E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 698203D51D219753002CB45E /* Rendezvous */;
+			targetProxy = 698203F91D219753002CB45E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		698203DD1D219753002CB45E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				698203DE1D219753002CB45E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		698203E51D219753002CB45E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				698203E61D219753002CB45E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		698203FF1D219753002CB45E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		698204001D219753002CB45E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		698204021D219753002CB45E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Rendezvous/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rendezvous.Rendezvous;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		698204031D219753002CB45E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Rendezvous/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rendezvous.Rendezvous;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		698204051D219753002CB45E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RendezvousTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rendezvous.RendezvousTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rendezvous.app/Rendezvous";
+			};
+			name = Debug;
+		};
+		698204061D219753002CB45E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RendezvousTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rendezvous.RendezvousTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rendezvous.app/Rendezvous";
+			};
+			name = Release;
+		};
+		698204081D219753002CB45E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RendezvousUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rendezvous.RendezvousUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rendezvous;
+			};
+			name = Debug;
+		};
+		698204091D219753002CB45E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RendezvousUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rendezvous.RendezvousUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rendezvous;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		698203D11D219753002CB45E /* Build configuration list for PBXProject "Rendezvous" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				698203FF1D219753002CB45E /* Debug */,
+				698204001D219753002CB45E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		698204011D219753002CB45E /* Build configuration list for PBXNativeTarget "Rendezvous" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				698204021D219753002CB45E /* Debug */,
+				698204031D219753002CB45E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		698204041D219753002CB45E /* Build configuration list for PBXNativeTarget "RendezvousTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				698204051D219753002CB45E /* Debug */,
+				698204061D219753002CB45E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		698204071D219753002CB45E /* Build configuration list for PBXNativeTarget "RendezvousUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				698204081D219753002CB45E /* Debug */,
+				698204091D219753002CB45E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		698203E01D219753002CB45E /* Rendezvous.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				698203E11D219753002CB45E /* Rendezvous.xcdatamodel */,
+			);
+			currentVersion = 698203E11D219753002CB45E /* Rendezvous.xcdatamodel */;
+			path = Rendezvous.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 698203CE1D219753002CB45E /* Project object */;
+}
