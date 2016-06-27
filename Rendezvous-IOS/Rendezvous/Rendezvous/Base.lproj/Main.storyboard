@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MNk-U9-3FS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MNk-U9-3FS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -385,6 +385,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJz-pm-Sfa">
                                 <rect key="frame" x="255" y="524" width="92" height="30"/>
                                 <state key="normal" title="Invite Friends"/>
+                                <connections>
+                                    <segue destination="u7S-C7-rwk" kind="show" id="4oy-Z5-tLY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -393,6 +396,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbn-ke-aFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2872" y="341"/>
+        </scene>
+        <!--MyContacts-->
+        <scene sceneID="Nae-n3-fTs">
+            <objects>
+                <tableViewController title="MyContacts" id="zrS-0t-6vE" customClass="ContactsViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="WIG-RY-qav">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="zrS-0t-6vE" id="pLf-jw-ID0"/>
+                            <outlet property="delegate" destination="zrS-0t-6vE" id="IjR-nJ-C4g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MyContacts" id="8Ah-JY-fEc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HyD-6Q-Obd"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bf6-Bf-Puu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3680" y="1071"/>
         </scene>
         <!--Visit Settings-->
         <scene sceneID="4Mq-VQ-Rgr">
@@ -548,6 +572,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MbT-xO-M6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="26" y="-501"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N6C-g7-jtd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UqZ-SZ-wHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u7S-C7-rwk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WDq-sX-Idf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zrS-0t-6vE" kind="relationship" relationship="rootViewController" id="dll-ah-3ls"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2872" y="1071"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
