@@ -385,9 +385,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJz-pm-Sfa">
                                 <rect key="frame" x="255" y="524" width="92" height="30"/>
                                 <state key="normal" title="Invite Friends"/>
-                                <connections>
-                                    <segue destination="u7S-C7-rwk" kind="show" id="4oy-Z5-tLY"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -410,9 +407,7 @@
                             <outlet property="delegate" destination="zrS-0t-6vE" id="IjR-nJ-C4g"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MyContacts" id="8Ah-JY-fEc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HyD-6Q-Obd"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="MyContacts" id="8Ah-JY-fEc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bf6-Bf-Puu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -594,6 +589,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="TAK-eT-9Qe"/>
-        <segue reference="KPa-ti-68O"/>
+        <segue reference="T40-WA-oon"/>
     </inferredMetricsTieBreakers>
 </document>
