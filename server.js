@@ -3,11 +3,15 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var path = require('path');
+var mysql = require("mysql");
+
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(express.static(path.join(__dirname, './client')));
-require('./server/config/mongoose.js');
-
+require('./server/config/mysql.js');
 require('./server/config/routes.js')(app);
 
 
