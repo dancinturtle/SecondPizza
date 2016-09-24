@@ -17,30 +17,36 @@
 
 
     <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.1.9/angular-materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.1.9/angular-materialize.min.js"></script> -->
 
   </head>
   <body>
-<div ng-view="">
+      <div ng-view="">
 
-</div>
+      </div>
 
 
     <script type="text/javascript">
-    var donationApp = angular.module('donationApp', ['ngRoute', 'ui.materialize']);
+    var donationApp = angular.module('donationApp', ['ngRoute',
+      // 'ui.materialize'
+      ]);
 
     </script>
     <script src="routes.js"></script>
 
     <!-- Add controllers/other js here -->
+    <script src="/js/controllers/loginCtrl.js"></script>
+    <script src="/js/controllers/dashboardCtrl.js"></script>
     <script src="/js/controllers/donationCtrl.js"></script>
+    <script src="/js/factories/loginFactory.js"></script>
+    <script src="/js/factories/dashboardFactory.js"></script>
     <script src="/js/factories/donationFactory.js"></script>
     <script src="/js/factories/businessFactory.js"></script>
 
@@ -48,3 +54,4 @@
 
   </body>
 </html>
+
