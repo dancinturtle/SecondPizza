@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xAF-eS-19I">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MNk-U9-3FS">
+>>>>>>> master
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -343,13 +347,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwo-ub-Pkq">
-                                <rect key="frame" x="194" y="513" width="213" height="30"/>
-                                <state key="normal" title="Add Friends From My Contacts"/>
-                                <connections>
-                                    <action selector="getContactsButtonPressed:" destination="A9Z-JV-JCi" eventType="touchUpInside" id="9aK-KQ-HUq"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="2" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yb9-D4-KWo">
                                 <rect key="frame" x="0.0" y="64" width="600" height="357"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -364,18 +361,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwo-ub-Pkq">
+                                <rect key="frame" x="194" y="513" width="213" height="30"/>
+                                <state key="normal" title="Add Friends From My Contacts"/>
+                                <connections>
+                                    <action selector="getContactsButtonPressed:" destination="A9Z-JV-JCi" eventType="touchUpInside" id="9aK-KQ-HUq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="People You May Know" id="Rsp-sA-HGk"/>
-                    <connections>
-                        <segue destination="G42-4s-eHl" kind="show" identifier="inviteFriendsSegue" id="NKf-2s-gcY"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Znf-Be-GEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2216" y="341"/>
         </scene>
+<<<<<<< HEAD
         <!--Invite Friends-->
         <scene sceneID="p0d-IN-LZe">
             <objects>
@@ -436,6 +438,8 @@
             </objects>
             <point key="canvasLocation" x="3680" y="1071"/>
         </scene>
+=======
+>>>>>>> master
         <!--Visit Settings-->
         <scene sceneID="4Mq-VQ-Rgr">
             <objects>
@@ -591,6 +595,7 @@
             </objects>
             <point key="canvasLocation" x="26" y="-501"/>
         </scene>
+<<<<<<< HEAD
         <!--Navigation Controller-->
         <scene sceneID="N6C-g7-jtd">
             <objects>
@@ -613,5 +618,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="KPa-ti-68O"/>
         <segue reference="2P8-Pt-1X3"/>
+=======
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TAK-eT-9Qe"/>
+        <segue reference="T40-WA-oon"/>
+>>>>>>> master
     </inferredMetricsTieBreakers>
 </document>
