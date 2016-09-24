@@ -4,6 +4,7 @@ var path = require('path');
 var con = mysql.createConnection({
       host: "localhost",
       user: "root",
+      port: "8889",
       password: "root",
       database: "pizzaforhomes"
   })
