@@ -3,6 +3,7 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
 
     $scope.business_info;
     $scope.donation_id = $routeParams.id;
+    $scope.business_tweets = [];
 
     // Add new user/business
     $scope.newUser = {};
@@ -71,6 +72,7 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
         .then(function(data){
             $scope.twitterErrors = undefined;
             $scope.hashtagData = JSON.parse(data.result.hashData);
+            console.log($scope.hashtagData);
         })
         .catch(function(error){
             console.error('there was an error retrieving data: ', error);
@@ -79,6 +81,13 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
     }
 
     //   $scope.getUser('BoyCook');
-    // $scope.getSearch('Beyonce');
+    $scope.getDonationTweets = function(){
+        for (var business in $scope.business_info) {
+            console.log('business: ', business);
+            // $scope.business_tweets.push($scope.getSearch(business.));
+
+        }
+    }
+
 
 });
