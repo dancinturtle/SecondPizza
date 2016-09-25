@@ -3,19 +3,21 @@ donationApp.factory('userFactory', function($http){
     var users;
     var factory = {};
 
+    // get users
     factory.getUsers = function(callback){
         $http.post('/getUsers').success(function(output){
-            console.log(output);
             callback(output);
         });
     }
-    //
-    // factory.add = function(data, callback){
-    //   $http.post('/add', data).success(function(output){
-    //     console.log(output);
-    //     callback(output);
-    //   });
-    // }
+
+    // add user
+    factory.add = function(data, callback){
+
+        console.log('data: ', data);
+        $http.post('/create', data).success(function(output){
+            callback(output);
+        });
+    }
 
 
     return factory;
