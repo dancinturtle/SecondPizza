@@ -11,12 +11,15 @@ donationApp.controller('checkoutCtrl', function ($scope, donationFactory, $windo
 
   $scope.create = function(newCharity){
     // console.log(newCharity);
-    newCharity.user_id = 2;
+    userFactory.getLoggedInUser(function(data){
+      $scope.loggedInUser = data;
+    })
+    newCharity.user_id = $scope.loggedInUser;
     donationFactory.newDonation(newCharity, function(data){
       // console.log(data);
       $scope.newCharity = {};
 
-      $location.path('/business/2');
+      $location.path('/business/'+ $scope.loggedInUser);
     })
   }
 
