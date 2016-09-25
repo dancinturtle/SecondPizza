@@ -1,8 +1,6 @@
 
 <div class="container" ng-controller="businessCtrl">
-    <h2><span ng-bind="business_info[0].name"></span>'s Page of Progress!</h2>
-    <!-- {{business_tweets}} -->
-    <!-- {{hashtagData}} -->
+    <h2>Page of Progress for <span ng-bind="business_info[0].name"></span>!</h2>
     <div class="row">
         <div class="col-md-12">
             <table class="table table-bordered table-striped">
@@ -14,11 +12,21 @@
                     <th>Total donation:</th>
                     <th>Money left to raise:</th>
                 </thead>
-                <tbody ng-repeat="business in business_info">
+                <tbody ng-repeat="business in business_info", "x in hashtagData.statuses">
                       <tr>
                         <td ng-bind="business.charity"></td>
                         <td ng-bind="business.hashtag"></td>
-                        <td ng-bind="business.expiration_date"></td>
+
+                        <td><span ng-if="business.timeLeft.weeks"><span ng-bind="business.timeLeft.weeks" ></span> weeks </span><span ng-if="business.timeLeft.days"><span ng-bind="business.timeLeft.days"></span> days </span><span ng-if="business.timeLeft.hours"><span ng-bind="business.timeLeft.hours" ></span> hours </span><span ng-if="business.timeLeft.minutes"><span ng-bind="business.timeLeft.minutes"></span> minutes </span>
+
+                        </td>
+
+                        <!-- <span ng-bind='customer.timeHere.weeks' ng-if='customer.timeHere.weeks'></span><span ng-if="customer.timeHere.weeks"> weeks </span>
+                                      <span ng-if='customer.timeHere.days' ng-bind='customer.timeHere.days'></span><span ng-if='customer.timeHere.days'> days </span>
+                                      <span ng-bind='customer.timeHere.hours' ng-if='customer.timeHere.hours'></span><span ng-if='customer.timeHere.hours'> hours </span>
+                                      <span ng-bind='customer.timeHere.minutes' ng-if="customer.timeHere.minutes"></span><span ng-if='customer.timeHere.minutes'> minutes </span> -->
+
+
                         <td ng-bind="business.donationscol"></td>
                         <td ng-bind="business.total_amount"></td>
                         <td ng-bind="business.amount_left"></td>
@@ -34,11 +42,13 @@
                       </tr>
                       <tr>
                           <td colspan="6">
+
                               <p>
                                   <!-- {{business_tweets}} -->
                                   <!-- {{business}} -->
 
                                   <!-- statuses -->
+                                  <!-- {{hashtagData}} -->
                               </p>
                               <p ng-repeat="x in hashtagData.statuses">{{x.text}}<p>
                              <!-- <p ng-repeat="x in business_tweets[statases]">{{x}}<p> -->
@@ -46,6 +56,7 @@
                                  <!-- <p ng-repeat="n in business_tweets[$index] track by $index">
      {{business_tweets[$index]}}
  </p> -->
+
                          </td>
                       </tr>
 
