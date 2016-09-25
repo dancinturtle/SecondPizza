@@ -9,6 +9,9 @@ donationApp.config(function ($routeProvider) {
     .when('/donation',{
         templateUrl: 'partials/donation.html'
     })
+    .when('/business',{
+        templateUrl: 'partials/business.html'
+    })
     .otherwise({
       redirectTo: '/'
     });
