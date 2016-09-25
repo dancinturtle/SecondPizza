@@ -1,7 +1,7 @@
-donationApp.controller('loginCtrl', function ($scope, userFactory) {
+donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory) {
 
     $scope.business_info;
-    $scope.donation_id = 2;
+    $scope.donation_id = $routeParams.id;
 
     // Add new user/business
     $scope.add = function(){

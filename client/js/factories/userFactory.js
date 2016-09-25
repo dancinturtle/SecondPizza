@@ -1,7 +1,6 @@
 donationApp.factory('userFactory', function($http){
     // var categories = [{name:'array'}, {name: 'string'}, {name:'binary search tree' }, {name:'singly link list' }];
     var users;
-    var donation_id = 2;
     var factory = {};
 
     // get users
