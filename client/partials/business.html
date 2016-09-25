@@ -2,7 +2,7 @@
     <h2>Page of Progress for <span ng-bind="business_info[0].name"></span>!</h2>
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <table class="table table-bordered table-striped">
                 <thead>
                     <th>Charity donated to:</th>
@@ -12,7 +12,7 @@
                     <th>Total donation:</th>
                     <th>Money left to raise:</th>
                 </thead>
-                <tbody ng-repeat="business in business_info", "x in hashtagData.statuses">
+                <tbody ng-repeat="business in business_info">
                       <tr>
                         <td ng-bind="business.charity"></td>
                         <td ng-bind="business.hashtag"></td>
@@ -40,13 +40,13 @@
                           </div>
                         </td>
                       </tr>
-                      <tr>
+                      <!-- <tr>
                           <td colspan="6">
                              <p>{{x.text}}<p>
                          </td>
-                      </tr>
+                      </tr> -->
 
-                    </div>
+                    <!-- </div> -->
                     <!-- <tr ng-repeat="business in business_info">
                         <td ng-bind="business.charity"></td>
                         <td ng-bind="business.hashtag"></td>
@@ -64,6 +64,11 @@
                     </tr> -->
                 </tbody>
             </table>
+        </div>
+        <div class="col-md-4">
+          <p ng-repeat="x in hashtagData.statuses">
+             {{x.text}}
+          </p>
         </div>
     </div>
 </div>

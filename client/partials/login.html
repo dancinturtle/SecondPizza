@@ -1,11 +1,42 @@
-<div class="container" ng-controller="loginCtrl">
-    <h2>	LOGIN </h2>
+<div class="container greyBack" ng-controller="loginCtrl">
 
-    <form>
-        <input type="text" name="name" value="" ng-model="newUser.name">
-        <input type="password" name="password" value="" ng-model="newUser.password">
-        <input type="text" name="store_number" value="" ng-model="newUser.store_number">
 
-        <button type="button" name="button" ng-click="add()">Add User</button>
-    </form>
+    <div class="row">
+      <div class="col-md-6">
+        <img id="snow" src="./assets/images/snow.jpg">
+      </div>
+
+
+
+    <!-- end -->"
+
+      <form class="loginForm col-md-2">
+        <div class="loginFormGroup form-group">
+          <label class="control-label" for="name">Name: </label>
+          <input type="text" name="name" value="" ng-model="newUser.name">
+        </div>
+        <div class="loginFormGroup form-group">
+          <label class="control-label" for="password">Password: </label>
+          <input type="password" name="password" value="" ng-model="newUser.password">
+        </div>
+        <div class="loginFormGroup form-group">
+          <label class="control-label" for="store_number">Store ID: </label>
+          <input type="text" name="store_number" value="" ng-model="newUser.store_number">
+        </div>
+
+          <button type="button" class="btn btn-lg btn-primary" name="button" ng-click="add()">Login</button>
+      </form>
+      <div class="col-md-4 quotes">
+        <h4>
+          Edmund Burke said, "Nobody made a greater mistake than he who did nothing because he could do only a little."
+        </h4>
+        <h4>
+          We say, "Everyone makes this kind of silly mistake where they try to help and only do a little when they could have done a little bit more."
+
+        </h4>
+        <h4>
+          We help you do a little bit more.
+        </h4>
+      </div>
+      </div>
 </div>
