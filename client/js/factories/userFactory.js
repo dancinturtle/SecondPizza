@@ -1,4 +1,4 @@
-donationApp.factory('businessFactory', function($http){
+donationApp.factory('userFactory', function($http){
     // var categories = [{name:'array'}, {name: 'string'}, {name:'binary search tree' }, {name:'singly link list' }];
     var users;
     var factory = {};
