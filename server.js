@@ -44,7 +44,7 @@ app.all('/*', function (req, res, next) {
 //     console.log(path.join(__dirname, '/sliderImages.json'));
 //     res.end(contents);
 //  });
-//
+
 // app.all("/api/*", function (req, res, next) {
 //     res.header("Access-Control-Allow-Origin", "*");
 //     res.header("Access-Control-Allow-Headers", "Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With");

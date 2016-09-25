@@ -50,16 +50,20 @@ module.exports = (function(){
         updatedonation: function(req, res) {
             con.query('SELECT * FROM `donations` WHERE `id` = "'+req.params.charity_id+'"', function (error, rows) {
                 var amount_left = rows[0].amount_left;
-                var new_amount = amount_left - req.params.amount;
 
-                con.query('UPDATE donations SET amount_left = ? WHERE id = ?', [new_amount, req.params.charity_id], function(err, results) {
-                    if(err){
-                        res.json(err)
-                    }
-                    else {
-                        res.json({'success': 'amount left updated for donation'});
-                    }
-                });
+                if(req.params.amount > amount_left){
+                    res.json({'error': 'amount requesting to donate is MORE than amount_left'});
+                }else {
+                    var new_amount = amount_left - req.params.amount;
+                    con.query('UPDATE donations SET amount_left = ? WHERE id = ?', [new_amount, req.params.charity_id], function(err, results) {
+                        if(err){
+                            res.json(err)
+                        }
+                        else {
+                            res.json({'success': 'amount left updated for donation'});
+                        }
+                    });
+                }
             });
         }
     }
