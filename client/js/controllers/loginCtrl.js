@@ -1,12 +1,14 @@
 
 donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory, $location) {
 
-    $scope.business_info;
-    $scope.donation_id = $routeParams.id;
+
+    // $scope.donation_id = $routeParams.id;
+    // $scope.business_id = $routeParams.id;
+    // console.log("business id", $scope.business_id);
 
     // Add new user/business
     $scope.newUser = {};
-    $scope.loggedInUser
+    $scope.loggedInUser;
 
     userFactory.getAllUsers(function(data){
       $scope.allUsers = data;
@@ -17,7 +19,10 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
         console.log("names", $scope.allUsers[i].name, userToFind.name);
         if($scope.allUsers[i].name == userToFind.name && $scope.allUsers[i].store_number == userToFind.store_number){
 
-          $scope.loggedInUser = userToFind;
+          $scope.loggedInUser = $scope.allUsers[i];
+          userFactory.rememberUser($scope.loggedInUser, function(res){
+            console.log("Back here again", res);
+          })
           return true;
         }
       }
@@ -25,27 +30,29 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
     }
 
 
-    userFactory.getdonation($scope.donation_id, function(data){
-
-        console.log('adadaddad', data[0]);
-        $scope.business_info = data[0];
-    })
+  
 
     $scope.add = function(){
         console.log("user data: ", $scope.newUser);
         if($scope.findUser($scope.newUser)){
-          $scope.loggedInUser = $scope.newUser;
+
           console.log("returned true", $scope.loggedInUser)
-          $scope.newUser = {};
+          $location.path('/business/' + $scope.loggedInUser.id);
+
         }
         else {
           userFactory.add($scope.newUser, function(data){
-            $scope.findUser($scope.newUser);
-            console.log("returned false", $scope.loggedInUser)
-            $scope.newUser = {};
+            $scope.newUser.id = data;
+            $scope.loggedInUser = $scope.newUser;
+            console.log("returned false")
+
           })
+          // $scope.findUser($scope.newUser);
+
         }
-        $location.path('/business/');
+        $scope.newUser = {};
+        // console.log($scope.loggedInUser)
+        // $location.path('/business/' + $scope.loggedInUser.id);
       };
 
 });

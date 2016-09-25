@@ -43,9 +43,9 @@ module.exports = function(app){
     });
 
     // Get charity/donation progress
-    app.get('/business/:charity_id/', function(req, res){
-        console.log("GETTING donation information");
-        users.getdonation(req, res);
+    app.get('/business/:business_id', function(req, res){
+        console.log("GETTING donation information", req.params.business_id);
+        users.getdonations(req, res);
     });
 
 

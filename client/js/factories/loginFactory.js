@@ -2,6 +2,7 @@ donationApp.factory('loginFactory', function($http){
  // var categories = [{name:'array'}, {name: 'string'}, {name:'binary search tree' }, {name:'singly link list' }];
   var factory = {};
   allUsers = [];
+  var loggedInUser = {};
 
   factory.getAllUsers = function(callback){
      $http.post('/getAllUsers').success(function(res){
@@ -9,6 +10,8 @@ donationApp.factory('loginFactory', function($http){
        callback(allUsers);
      })
    }
+
+
 // factory.getCategory = function(callback){
 //   callback(categories)
 // }
