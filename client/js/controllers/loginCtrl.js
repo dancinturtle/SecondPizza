@@ -70,7 +70,7 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
         TwitterService.getSearch(hashtag)
         .then(function(data){
             $scope.twitterErrors = undefined;
-            $scope.results = JSON.parse(data.result.hashData);
+            $scope.hashtagData = JSON.parse(data.result.hashData);
         })
         .catch(function(error){
             console.error('there was an error retrieving data: ', error);
