@@ -1,4 +1,5 @@
 var users = require('../controllers/users.js');
+var charities = require('../controllers/charities.js');
 
 module.exports = function(app){
 
@@ -15,6 +16,13 @@ module.exports = function(app){
 
     app.get('/companies', function(req, res){
         users.finddonations(req, res)
+    });
+    app.get('/charities', function(req, res){
+        charities.getAll(req, res)
+    });
+
+    app.post('/newDonation', function(req, res){
+      charities.newDonation(req, res)
     });
 
 
