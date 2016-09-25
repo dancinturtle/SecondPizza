@@ -25,6 +25,30 @@ module.exports = function(app){
       charities.newDonation(req, res)
     });
 
+    // From Business site to update donation
+    app.post('/donation/:charity_id/:amount', function(req, res){
+        console.log("DONATION: to charity with ID " + req.params.charity_id + " AMOUNT " + req.params.amount);
+        console.log("HI AMYYYYY - BHARGIIII");
+
+        users.updatedonation(req, res);
+    });
+
+
+    // From Business site to update donation
+    app.get('/donation/:charity_id/:amount', function(req, res){
+        console.log("DONATION: to charity with ID " + req.params.charity_id + " AMOUNT " + req.params.amount);
+        console.log("HI AMYYYYY - BHARGIIII");
+
+        users.updatedonation(req, res);
+    });
+
+    // Get charity/donation progress
+    app.get('/business/:charity_id/', function(req, res){
+        console.log("GETTING donation information");
+        users.getdonation(req, res);
+    });
+
+
 
   // app.get('/users/getall', function(req, res){
   //   console.log("Getting stuff");

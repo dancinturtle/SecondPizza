@@ -1,4 +1,7 @@
-donationApp.controller('loginCtrl', function ($scope, userFactory) {
+donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory) {
+
+    $scope.business_info;
+    $scope.donation_id = $routeParams.id;
 
     // Add new user/business
     $scope.add = function(){
@@ -9,4 +12,10 @@ donationApp.controller('loginCtrl', function ($scope, userFactory) {
             $scope.newUser = {};
         });
     }
+
+    userFactory.getdonation($scope.donation_id, function(data){
+
+        console.log('adadaddad', data[0]);
+        $scope.business_info = data[0];
+    })
 });
