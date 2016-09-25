@@ -28,10 +28,22 @@ module.exports = (function(){
             con.query('SELECT * FROM users', function(err, rows){
                 if(err){
                     res.json(err);
-                };
+                }
+                else {
+                  res.json(rows);
+                }
+            });
+        },
 
-                res.json(rows);
-            })
+        finddonations: function(req, res){
+          con.query('SELECT users.name, donations.donationscol, donations.total_amount, donations.amount_left, donations.expiration_date, charities.name AS charity FROM users JOIN donations ON users.id = donations.user_id JOIN charities ON donations.charity_id = charities.id;', function(err, rows){
+            if(err){
+              res.json(err)
+            }
+            else {
+              res.json(rows);
+            }
+          });
         }
     }
 

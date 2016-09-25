@@ -10,8 +10,11 @@ module.exports = function(app){
 
     // Add new user/business
     app.post('/create', function(req, res){
-        console.log("req", req);
         users.create(req, res)
+    });
+
+    app.get('/companies', function(req, res){
+        users.finddonations(req, res)
     });
 
 
