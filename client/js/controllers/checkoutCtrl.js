@@ -1,5 +1,5 @@
 donationApp.controller('checkoutCtrl', function ($scope, donationFactory, $window, $location, userFactory) {
-    userFactory.getUsers(function(data){
+    userFactory.getAllUsers(function(data){
         $scope.categories = data;
   });
 
