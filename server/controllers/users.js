@@ -30,20 +30,37 @@ module.exports = (function(){
                     res.json(err);
                 }
                 else {
-                  res.json(rows);
+                    res.json(rows);
                 }
             });
         },
 
         finddonations: function(req, res){
-          con.query('SELECT users.name, donations.donationscol, donations.total_amount, donations.amount_left, donations.expiration_date, charities.name AS charity FROM users JOIN donations ON users.id = donations.user_id JOIN charities ON donations.charity_id = charities.id;', function(err, rows){
-            if(err){
-              res.json(err)
-            }
-            else {
-              res.json(rows);
-            }
-          });
+            con.query('SELECT users.name, donations.donationscol, donations.total_amount, donations.amount_left, donations.expiration_date, charities.name AS charity FROM users JOIN donations ON users.id = donations.user_id JOIN charities ON donations.charity_id = charities.id;', function(err, rows){
+                if(err){
+                    res.json(err)
+                }
+                else {
+                    res.json(rows);
+                }
+            });
+        },
+
+        // Update donations
+        updatedonation: function(req, res) {
+            con.query('SELECT * FROM `donations` WHERE `id` = "'+req.params.charity_id+'"', function (error, rows) {
+                var amount_left = rows[0].amount_left;
+                var new_amount = amount_left - req.params.amount;
+
+                con.query('UPDATE donations SET amount_left = ? WHERE id = ?', [new_amount, req.params.charity_id], function(err, results) {
+                    if(err){
+                        res.json(err)
+                    }
+                    else {
+                        res.json({'success': 'amount left updated for donation'});
+                    }
+                });
+            });
         }
     }
 

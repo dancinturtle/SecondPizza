@@ -18,12 +18,20 @@ module.exports = function(app){
     });
 
     // From Business site to update donation
-    app.post('/donation/:charity/:amount', function(req, res){
-        console.log("DONATION: to charity with ID " + req.params.charity + " AMOUNT " + req.params.amount);
+    app.post('/donation/:charity_id/:amount', function(req, res){
+        console.log("DONATION: to charity with ID " + req.params.charity_id + " AMOUNT " + req.params.amount);
         console.log("HI AMYYYYY - BHARGIIII");
-        // users.finddonations(req, res)
-        res.json({'success': 'added'});
 
+        users.updatedonation(req, res);
+    });
+
+
+    // From Business site to update donation
+    app.get('/donation/:charity_id/:amount', function(req, res){
+        console.log("DONATION: to charity with ID " + req.params.charity_id + " AMOUNT " + req.params.amount);
+        console.log("HI AMYYYYY - BHARGIIII");
+
+        users.updatedonation(req, res);
     });
 
 
