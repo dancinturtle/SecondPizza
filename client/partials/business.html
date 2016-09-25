@@ -1,6 +1,8 @@
+
 <div class="container" ng-controller="businessCtrl">
     <h2><span ng-bind="business_info[0].name"></span>'s Page of Progress!</h2>
-
+    <!-- {{business_tweets}} -->
+    <!-- {{hashtagData}} -->
     <div class="row">
         <div class="col-md-12">
             <table class="table table-bordered table-striped">
@@ -32,7 +34,18 @@
                       </tr>
                       <tr>
                           <td colspan="6">
-                             <p ng-repeat="x in hashtagData.statuses">{{x.text}}<p>
+                              <p>
+                                  <!-- {{business_tweets}} -->
+                                  <!-- {{business}} -->
+
+                                  <!-- statuses -->
+                              </p>
+                              <p ng-repeat="x in hashtagData.statuses">{{x.text}}<p>
+                             <!-- <p ng-repeat="x in business_tweets[statases]">{{x}}<p> -->
+
+                                 <!-- <p ng-repeat="n in business_tweets[$index] track by $index">
+     {{business_tweets[$index]}}
+ </p> -->
                          </td>
                       </tr>
 

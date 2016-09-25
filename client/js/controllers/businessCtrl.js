@@ -15,8 +15,11 @@ donationApp.controller('businessCtrl', function ($scope, $routeParams, userFacto
       userFactory.getdonations($routeParams.id, function(data){
           $scope.business_info = data;
             for (var business in $scope.business_info) {
-                $scope.business_tweets.push($scope.getSearch($scope.business_info[business].hashtag));
+                $scope.getSearch($scope.business_info[business].hashtag);
+                // $scope.business_tweets.push($scope.hashtagData);
             }
+
+
       });
   }
 
@@ -28,7 +31,11 @@ donationApp.controller('businessCtrl', function ($scope, $routeParams, userFacto
       .then(function(data){
           $scope.twitterErrors = undefined;
           $scope.hashtagData = JSON.parse(data.result.hashData);
+          $scope.business_tweets.push($scope.hashtagData);
           console.log($scope.hashtagData);
+
+          console.log('ssss', $scope.business_tweets);
+
       })
       .catch(function(error){
           console.error('there was an error retrieving data: ', error);
