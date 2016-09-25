@@ -15,8 +15,18 @@
                 <tbody ng-repeat="business in business_info">
                       <tr>
                         <td ng-bind="business.charity"></td>
-                        <td ng-bind="business.hashtag"></td>
-                        <td ng-bind="business.expiration_date"></td>
+                        <td>#<span ng-bind="business.hashtag" ng-if="business.hashtag"></span></td>
+
+                        <td><span ng-if="business.timeLeft.weeks"><span ng-bind="business.timeLeft.weeks" ></span> weeks </span><span ng-if="business.timeLeft.days"><span ng-bind="business.timeLeft.days"></span> days </span><span ng-if="business.timeLeft.hours"><span ng-bind="business.timeLeft.hours" ></span> hours </span><span ng-if="business.timeLeft.minutes"><span ng-bind="business.timeLeft.minutes"></span> minutes </span>
+
+                        </td>
+
+                        <!-- <span ng-bind='customer.timeHere.weeks' ng-if='customer.timeHere.weeks'></span><span ng-if="customer.timeHere.weeks"> weeks </span>
+                                      <span ng-if='customer.timeHere.days' ng-bind='customer.timeHere.days'></span><span ng-if='customer.timeHere.days'> days </span>
+                                      <span ng-bind='customer.timeHere.hours' ng-if='customer.timeHere.hours'></span><span ng-if='customer.timeHere.hours'> hours </span>
+                                      <span ng-bind='customer.timeHere.minutes' ng-if="customer.timeHere.minutes"></span><span ng-if='customer.timeHere.minutes'> minutes </span> -->
+
+
                         <td ng-bind="business.donationscol"></td>
                         <td ng-bind="business.total_amount"></td>
                         <td ng-bind="business.amount_left"></td>
