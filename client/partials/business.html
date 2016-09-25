@@ -1,5 +1,5 @@
 <div class="container" ng-controller="businessCtrl">
-    <h2><span ng-bind="business_info[0].name"></span>'s Page of Progress!</h2>
+    <h2>Page of Progress for <span ng-bind="business_info[0].name"></span>!</h2>
 
     <div class="row">
         <div class="col-md-12">
@@ -12,7 +12,7 @@
                     <th>Total donation:</th>
                     <th>Money left to raise:</th>
                 </thead>
-                <tbody ng-repeat="business in business_info">
+                <tbody ng-repeat="business in business_info", "x in hashtagData.statuses">
                       <tr>
                         <td ng-bind="business.charity"></td>
                         <td ng-bind="business.hashtag"></td>
@@ -42,7 +42,7 @@
                       </tr>
                       <tr>
                           <td colspan="6">
-                             <p ng-repeat="x in hashtagData.statuses">{{x.text}}<p>
+                             <p>{{x.text}}<p>
                          </td>
                       </tr>
 
