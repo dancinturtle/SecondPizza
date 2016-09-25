@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <title>Donation App </title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" /> -->
 
-    <!-- Optional theme -->
+    <!-- Optional theme
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,8 +26,13 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.1.9/angular-materialize.min.js"></script>
 
+    <!-- stylesheet for dashboard partial -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/dashboard.css">
+    <!-- end -->
+
   </head>
   <body>
+  <div ng-include="'partials/includes/_navbar.html'"></div>
       <div ng-view="">
 
       </div>
@@ -43,13 +48,13 @@
 
     <!-- Add controllers/other js here -->
     <script src="/js/controllers/loginCtrl.js"></script>
-        <script src="/js/factories/loginFactory.js"></script>
+    <script src="/js/factories/loginFactory.js"></script>
     <script src="/js/controllers/dashboardCtrl.js"></script>
     <script src="/js/controllers/donationCtrl.js"></script>
 
     <script src="/js/factories/dashboardFactory.js"></script>
     <script src="/js/factories/donationFactory.js"></script>
-    <script src="/js/factories/businessFactory.js"></script>
+    <script src="/js/factories/userFactory.js"></script>
     <script src="routes.js"></script>
 
 
