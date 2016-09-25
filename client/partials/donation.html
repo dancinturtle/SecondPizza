@@ -1,3 +1,93 @@
-<div class="container" ng-controller="donationCtrl">
-    <h2>DONATION</h2>
+<div class="container" ng-controller="checkoutCtrl">
+    <h2>MAKE A DONATION</h2>
+
+
+<!-- <form name="checkoutForm" stripe-form="stripeCallback" ng-submit="onSubmit()" data-abide> -->
+<form>
+
+
+  <div class="form-group">
+      <label for="charities">Select a Charity </label>
+      <select class="form-control" name="charities" ng-model="newCharity.charity" ng-options="charity.name for charity in charities">
+        <option ng-bind="charity.id"></option>
+      </select><br/>
+      <label for="reason">Tell Us About Your Donation</label><br />
+      <textarea class="form-control" cols="40" rows="4" ng-model="newCharity.desc"></textarea> <br /><br />
+      <label for="expiration">When will your donation challenge end?</label>
+      <input class="form-control" type="date" ng-model="newCharity.expiration" />
+
+      <label>Select Your HashTag</label>
+      <input class="form-control" type="text" ng-model="newCharity.hashtag"/>
+  </div>
+<br /><br />
+
+  <div ng-if="processing" us-spinner></div>
+
+  <div class="form-group">
+    <div class="row">
+
+      <label class="large-12 columns">Name
+        <input class="form-control" ng-model="name" type="text" placeholder="Name">
+      </label>
+
+      <label class="large-12 columns">Address
+        <input class="form-control" ng-model="address" type="text" placeholder="Address">
+      </label>
+   </div>
+ </div>
+
+ <div class="form-group">
+   <legend>Payment Information</legend>
+
+   <div class="row">
+     <div class="large-6 columns" ng-class="{error: checkoutForm.number.$invalid}">
+       <label>Card Information
+         <input ng-model="number" name="number" payments-format="card" payments-validate="card"
+                placeholder="Card Number" class="form-control" type="text"/>
+       </label>
+       <!-- <small class="error">Invalid card number</small> -->
+     </div>
+     <div class="large-3 columns" ng-class="{error: checkoutForm.expiry.$invalid}">
+       <label>Expiry
+         <input ng-model="expiry" name="expiry" payments-format="expiry" payments-validate="expiry"
+                class="form-control" placeholder="Expiry" type="text"/>
+       </label>
+       <!-- <small class="error">Invalid date.</small> -->
+     </div>
+     <div class="large-3 columns" ng-class="{error: checkoutForm.cvc.$invalid}">
+       <label>CVC
+         <input class="form-control" ng-model="cvc" name="cvc" payments-format="cvc" payments-validate="cvc"
+                placeholder="CVC" type="text"/>
+       </label>
+       <!-- <small class="error">Invalid CVC.</small> -->
+     </div>
+
+       <div class="col-md-3">
+            <label>Amount to donate</label>
+            <input class="form-control" type="text" ng-model="newCharity.amount"/>
+       </div>
+   </div>
+ </div>
+
+ <!-- <alert ng-if="stripeError" type="'alert'" close="hideAlerts()">
+   Stripe returned an error: {{stripeError}}
+ </alert>
+
+ <alert ng-if="stripeToken" close="hideAlerts()">
+   Stripe successfully acquired! Token: {{stripeToken}}
+
+ </alert> -->
+
+
+ <!-- <div class="clearfix">
+   <div class="right">
+     <button class="cancel btn btn-danger" ng-click="$dismiss();">Cancel</button>
+     <button class="btn btn-primary" type="submit" ng-disabled="checkoutForm.$invalid" ng-click="token(); clear_cart()">Donate now!</button>
+   </div>
+ </div> -->
+    <!-- <input type="hidden" ng-model="newCharity.user_id" value="2"/> -->
+
+    <button class="btn btn-lg btn-primary pull-right" ng-click="create(newCharity)">Submit</button>
+</form>
+
 </div>
