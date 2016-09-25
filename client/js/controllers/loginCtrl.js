@@ -9,19 +9,19 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
     $scope.loggedInUser
 
     userFactory.getAllUsers(function(data){
-      $scope.allUsers = data;
+        $scope.allUsers = data;
     })
 
     $scope.findUser = function(userToFind){
-      for(var i=0; i<$scope.allUsers.length; i++){
-        console.log("names", $scope.allUsers[i].name, userToFind.name);
-        if($scope.allUsers[i].name == userToFind.name && $scope.allUsers[i].store_number == userToFind.store_number){
+        for(var i=0; i<$scope.allUsers.length; i++){
+            console.log("names", $scope.allUsers[i].name, userToFind.name);
+            if($scope.allUsers[i].name == userToFind.name && $scope.allUsers[i].store_number == userToFind.store_number){
 
-          $scope.loggedInUser = userToFind;
-          return true;
+                $scope.loggedInUser = userToFind;
+                return true;
+            }
         }
-      }
-      return false;
+        return false;
     }
 
 
@@ -34,36 +34,51 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
     $scope.add = function(){
         console.log("user data: ", $scope.newUser);
         if($scope.findUser($scope.newUser)){
-          $scope.loggedInUser = $scope.newUser;
-          console.log("returned true", $scope.loggedInUser)
-          $scope.newUser = {};
+            $scope.loggedInUser = $scope.newUser;
+            console.log("returned true", $scope.loggedInUser)
+            $scope.newUser = {};
         }
         else {
-          userFactory.add($scope.newUser, function(data){
-            $scope.findUser($scope.newUser);
-            console.log("returned false", $scope.loggedInUser)
-            $scope.newUser = {};
-          })
+            userFactory.add($scope.newUser, function(data){
+                $scope.findUser($scope.newUser);
+                console.log("returned false", $scope.loggedInUser)
+                $scope.newUser = {};
+            })
         }
         $location.path('/business/');
-      };
+    };
 
 
 
-      $scope.getUser = function(username){
-          console.log("username entered ", username);
-          TwitterService.getUser(username)
-          .then(function(data){
-              $scope.twitterErrors = undefined;
-              console.log('it works!!!', data.result.userData);
-              $scope.results = JSON.parse(data.result.userData);
-          })
-          .catch(function(error){
-              console.error('there was an error retrieving data: ', error);
-              $scope.twitterErrors = error.error;
-          })
-      }
+    $scope.getUser = function(username){
+        console.log("username entered ", username);
+        TwitterService.getUser(username)
+        .then(function(data){
+            $scope.twitterErrors = undefined;
+            console.log('it works!!!', data.result.userData);
+            $scope.results = JSON.parse(data.result.userData);
+        })
+        .catch(function(error){
+            console.error('there was an error retrieving data: ', error);
+            $scope.twitterErrors = error.error;
+        })
+    }
 
-      $scope.getUser('BoyCook');
+
+    // Get by hashtag
+    $scope.getSearch = function(hashtag){
+        TwitterService.getSearch(hashtag)
+        .then(function(data){
+            $scope.twitterErrors = undefined;
+            $scope.results = JSON.parse(data.result.hashData);
+        })
+        .catch(function(error){
+            console.error('there was an error retrieving data: ', error);
+            $scope.twitterErrors = error.error;
+        })
+    }
+
+    //   $scope.getUser('BoyCook');
+    // $scope.getSearch('Beyonce');
 
 });
