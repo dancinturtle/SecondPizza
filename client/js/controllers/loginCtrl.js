@@ -25,10 +25,8 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
         return false;
     }
 
-
+    // Get donation per id
     userFactory.getdonation($scope.donation_id, function(data){
-
-        console.log('adadaddad', data[0]);
         $scope.business_info = data[0];
     })
 
@@ -49,24 +47,7 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
         $location.path('/business/');
     };
 
-
-
-    $scope.getUser = function(username){
-        console.log("username entered ", username);
-        TwitterService.getUser(username)
-        .then(function(data){
-            $scope.twitterErrors = undefined;
-            console.log('it works!!!', data.result.userData);
-            $scope.results = JSON.parse(data.result.userData);
-        })
-        .catch(function(error){
-            console.error('there was an error retrieving data: ', error);
-            $scope.twitterErrors = error.error;
-        })
-    }
-
-
-    // Get by hashtag
+    // Get Tweets by hashtag
     $scope.getSearch = function(hashtag){
         TwitterService.getSearch(hashtag)
         .then(function(data){
@@ -80,7 +61,7 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
         })
     }
 
-    //   $scope.getUser('BoyCook');
+    // All donation tweets 
     $scope.getDonationTweets = function(){
         for (var business in $scope.business_info) {
             console.log('business: ', business);
