@@ -1,5 +1,5 @@
 <div class="container" ng-controller="businessCtrl">
-    <h2>Welcome <span ng-bind="business_info[0].name"></span>!</h2>
+    <h2><span ng-bind="business_info[0].name"></span>'s Page of Progress!</h2>
 
     <div class="row">
         <div class="col-md-12">
@@ -12,8 +12,27 @@
                     <th>Total donation:</th>
                     <th>Money left to raise:</th>
                 </thead>
-                <tbody>
-                    <tr ng-repeat="business in business_info">
+                <tbody ng-repeat="business in business_info">
+                      <tr>
+                        <td ng-bind="business.charity"></td>
+                        <td ng-bind="business.hashtag"></td>
+                        <td ng-bind="business.expiration_date"></td>
+                        <td ng-bind="business.donationscol"></td>
+                        <td ng-bind="business.total_amount"></td>
+                        <td ng-bind="business.amount_left"></td>
+                      </tr>
+                      <tr>
+                        <td colspan="6">
+                          <div class="progress">
+                              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{(business.total_amount - business.amount_left)/business.total_amount * 100}}" aria-valuemin="0" aria-valuemax="100" style="width:{{(business.total_amount - business.amount_left)/business.total_amount * 100}}%">
+                                  $ {{(business.total_amount - business.amount_left)}} / {{business.total_amount}}
+                              </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </div>
+                    <!-- <tr ng-repeat="business in business_info">
                         <td ng-bind="business.charity"></td>
                         <td ng-bind="business.hashtag"></td>
                         <td ng-bind="business.expiration_date"></td>
@@ -27,7 +46,7 @@
                               </div>
                           </div>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>

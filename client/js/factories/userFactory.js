@@ -4,12 +4,18 @@ donationApp.factory('userFactory', function($http, $location){
     var loggedInUser;
     var factory = {};
 
+
     // get users
     factory.getAllUsers = function(callback){
         $http.get('/getAllUsers').success(function(output){
             console.log("factory all users", output);
             callback(output);
         });
+    }
+
+    factory.getLoggedInUser = function(callback){
+      console.log('Logged in user', loggedInUser);
+      callback(loggedInUser);
     }
 
 

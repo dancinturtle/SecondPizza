@@ -37,7 +37,7 @@ module.exports = (function(){
         },
 
         finddonations: function(req, res){
-            con.query('SELECT users.name, donations.donationscol, donations.total_amount, donations.amount_left, donations.expiration_date, charities.name AS charity FROM users JOIN donations ON users.id = donations.user_id JOIN charities ON donations.charity_id = charities.id;', function(err, rows){
+            con.query('SELECT users.name, users.id, donations.donationscol, donations.total_amount, donations.amount_left, donations.expiration_date, charities.name AS charity FROM users JOIN donations ON users.id = donations.user_id JOIN charities ON donations.charity_id = charities.id;', function(err, rows){
                 if(err){
                     res.json(err)
                 }
@@ -71,7 +71,7 @@ module.exports = (function(){
         // Get specific donation
         getdonations: function(req, res){
             var chosenBusiness = req.params.business_id;
-            con.query('SELECT users.name, charities.name AS charity, donations.donationscol, donations.total_amount, donations.amount_left, donations.expiration_date, donations.hashtag FROM users JOIN donations ON users.id = donations.user_id JOIN charities ON donations.charity_id = charities.id WHERE users.id = ?', chosenBusiness, function(err, rows){
+            con.query('SELECT users.name, charities.name AS charity, donations.donationscol, donations.total_amount, donations.amount_left, donations.expiration_date, donations.hashtag FROM users LEFT JOIN donations ON users.id = donations.user_id LEFT JOIN charities ON donations.charity_id = charities.id WHERE users.id = ?', chosenBusiness, function(err, rows){
               if(err){
                   res.json(err)
               }

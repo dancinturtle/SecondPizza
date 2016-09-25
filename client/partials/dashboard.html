@@ -15,7 +15,7 @@
 				<tbody>
 
 					<tr ng-repeat="company in companies">
-						<td ng-bind="company.name"></td>
+						<td><a href="#/business/{{company.id}}">{{company.name}}</a></td>
 						<td ng-bind="company.charity"></td>
 						<td ng-bind="company.donationscol"></td>
 						<td ng-bind="company.total_amount"></td>
@@ -24,7 +24,7 @@
 					</tr>
 				</tbody>
 			</table>
-			
+
 
 
     </div>
