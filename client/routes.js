@@ -9,7 +9,7 @@ donationApp.config(function ($routeProvider) {
     .when('/donation',{
         templateUrl: 'partials/donation.html'
     })
-    .when('/business',{
+    .when('/business/:id',{
         templateUrl: 'partials/business.html'
     })
     .otherwise({

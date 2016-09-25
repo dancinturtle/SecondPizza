@@ -34,6 +34,12 @@ module.exports = function(app){
         users.updatedonation(req, res);
     });
 
+    // Get charity/donation progress
+    app.get('/business/:charity_id/', function(req, res){
+        console.log("GETTING donation information");
+        users.getdonation(req, res);
+    });
+
 
 
   // app.get('/users/getall', function(req, res){
