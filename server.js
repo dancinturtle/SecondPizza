@@ -72,7 +72,7 @@ app.post('/twitter/user', function (req, res) {
 app.get('/twitter/search/:hashtag', function (req, res) {
     var hashname = req.params.hashtag;
 
-    var data = twitter.getSearch({'q':'#'+hashname, 'count': 10}, function(error, response, body){
+    var data = twitter.getSearch({'q':'#'+hashname, 'count': 5}, function(error, response, body){
         res.status(404).send({
             "error" : error
         });

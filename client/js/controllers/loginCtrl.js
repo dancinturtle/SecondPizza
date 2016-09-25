@@ -60,28 +60,8 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
         // $location.path('/business/' + $scope.loggedInUser.id);
       };
 
-    // Get Tweets by hashtag
-    $scope.getSearch = function(hashtag){
-        TwitterService.getSearch(hashtag)
-        .then(function(data){
-            $scope.twitterErrors = undefined;
-            $scope.hashtagData = JSON.parse(data.result.hashData);
-            console.log($scope.hashtagData);
-        })
-        .catch(function(error){
-            console.error('there was an error retrieving data: ', error);
-            $scope.twitterErrors = error.error;
-        })
-    }
 
-    // All donation tweets
-    $scope.getDonationTweets = function(){
-        for (var business in $scope.business_info) {
-            console.log('business: ', business);
-            // $scope.business_tweets.push($scope.getSearch(business.));
 
-        }
-    }
 
 
 });

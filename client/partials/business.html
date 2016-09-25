@@ -40,6 +40,11 @@
                           </div>
                         </td>
                       </tr>
+                      <tr>
+                          <td colspan="6">
+                             <p ng-repeat="x in hashtagData.statuses">{{x.text}}<p>
+                         </td>
+                      </tr>
 
                     </div>
                     <!-- <tr ng-repeat="business in business_info">
@@ -60,38 +65,5 @@
                 </tbody>
             </table>
         </div>
-
-        <div class="col-md-6">
-            <p>
-                Tweets! [currently #Beyonce]
-            </p>
-            <ul>
-                <li ng-repeat="x in hashtagData.statuses">{{x.text}}</li>
-            </ul>
-            <!-- <ul>
-
-                <li>I donated $5! #DominosLovesRescueMe</li>
-                <li>I donated $15! #DominosLovesRescueMe</li>
-                <li>I donated $5! Pizza for the homeless! #DominosLovesRescueMe</li>
-            </ul> -->
-        </div>
-
-
-
     </div>
-
-<div class="row">
-    <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{business_info.amount_left/business_info.total_amount * 100}}" aria-valuemin="0" aria-valuemax="100" style="width:{{business_info.amount_left/business_info.total_amount * 100}}%">
-            $ {{business_info.amount_left}} / {{business_info.total_amount}}
-        </div>
-    </div>
-</div>
-<div class="col-md-6">
-    <ul>
-        <li>I donated $5! #DominosLovesRescueMe</li>
-        <li>I donated $15! #DominosLovesRescueMe</li>
-        <li>I donated $5! Pizza for the homeless! #DominosLovesRescueMe</li>
-    </ul>
-</div>
 </div>
