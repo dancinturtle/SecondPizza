@@ -1,5 +1,5 @@
 
-donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory, $location) {
+donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory, TwitterService, $location) {
 
     $scope.business_info;
     $scope.donation_id = $routeParams.id;
@@ -47,5 +47,23 @@ donationApp.controller('loginCtrl', function ($scope, $routeParams, userFactory,
         }
         $location.path('/business/');
       };
+
+
+
+      $scope.getUser = function(username){
+          console.log("username entered ", username);
+          TwitterService.getUser(username)
+          .then(function(data){
+              $scope.twitterErrors = undefined;
+              console.log('it works!!!', data.result.userData);
+              $scope.results = JSON.parse(data.result.userData);
+          })
+          .catch(function(error){
+              console.error('there was an error retrieving data: ', error);
+              $scope.twitterErrors = error.error;
+          })
+      }
+
+      $scope.getUser('BoyCook');
 
 });

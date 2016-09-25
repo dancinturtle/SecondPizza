@@ -1,3 +1,6 @@
+module.exports = require('./node_modules/twitter-node-client/lib/Twitter');
+
+
 var express = require('express');
 var app = express();
 // var mongoose = require('mongoose');
@@ -5,6 +8,26 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var mysql = require("mysql");
 var cors = require('cors');
+
+
+
+var error = function (err, response, body) {
+    console.log('ERROR [%s]', JSON.stringify(err));
+};
+var success = function (data) {
+    console.log('Data [%s]', data);
+};
+//
+var config = {
+    "consumerKey": "atQxLad5JcrvWcIMKlqnR9oeV",
+    "consumerSecret": "ETH06tf84ksllM8f9eZBH1vvWu3pKX0GKzLsAxyFQNQG5VSTKe",
+    "accessToken": "33150462-T77e6XV5E0iW0an6AaHrub5A7xE39l2tefFegZM29",
+    "accessTokenSecret": "lgNDwTWRY3oiFeaA41SEgBTFkYOaJiVv2PJGKpFTnRePO"
+};
+
+
+
+var twitter = new module.exports.Twitter(config);
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -21,6 +44,23 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(path.join(__dirname, './client')));
 require('./server/config/mysql.js');
 require('./server/config/routes.js')(app);
+
+
+//post to retrieve user data
+app.post('/twitter/user', function (req, res) {
+	var username = req.body.username;
+	var data = twitter.getUser({ screen_name: username}, function(error, response, body){
+		res.status(404).send({
+			"error" : "User Not Found"
+		});
+	}, function(data){
+		res.send({
+			result : {
+				"userData" : data
+			}
+		});
+	});
+});
 
 
 app.listen(8004, function() {
