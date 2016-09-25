@@ -21,3 +21,6 @@ h1{
 .greyBack {
 	background-color: darkgrey;
 }
+.dashcontainer {
+	padding: 50px;
+}
