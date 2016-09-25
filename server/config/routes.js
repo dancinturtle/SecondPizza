@@ -19,19 +19,13 @@ module.exports = function(app){
 
     // From Business site to update donation
     app.post('/donation/:charity/:amount', function(req, res){
-
-        console.log("posted: ", req.params.charity, req.params.amount);
+        console.log("DONATION: to charity with ID " + req.params.charity + " AMOUNT " + req.params.amount);
+        console.log("HI AMYYYYY - BHARGIIII");
         // users.finddonations(req, res)
         res.json({'success': 'added'});
 
     });
 
-    app.get('/donation/:charity/:amount', function(req, res){
-
-        console.log("getted: ", req.params.charity, req.params.amount);
-        res.json({'success': 'added'});
-        // users.finddonations(req, res)
-    });
 
 
   // app.get('/users/getall', function(req, res){

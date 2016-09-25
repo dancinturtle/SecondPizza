@@ -12,13 +12,10 @@ donationApp.factory('userFactory', function($http){
 
     // add user
     factory.add = function(data, callback){
-
-        console.log('data: ', data);
         $http.post('/create', data).success(function(output){
             callback(output);
         });
     }
-
 
     return factory;
 });

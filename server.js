@@ -36,14 +36,14 @@ app.all('/*', function (req, res, next) {
     next();
 });
 
-app.get('/', function (req, res) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    contents = fs.readFileSync("sliderImages.json", "utf8");
-    console.log(path.join(__dirname, '/sliderImages.json'));
-    res.end(contents);
- });
+// app.get('/', function (req, res) {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     res.writeHead(200, {'Content-Type': 'text/plain'});
+//     contents = fs.readFileSync("sliderImages.json", "utf8");
+//     console.log(path.join(__dirname, '/sliderImages.json'));
+//     res.end(contents);
+//  });
 //
 // app.all("/api/*", function (req, res, next) {
 //     res.header("Access-Control-Allow-Origin", "*");
