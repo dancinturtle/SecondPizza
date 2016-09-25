@@ -15,7 +15,7 @@
                 <tbody ng-repeat="business in business_info">
                       <tr>
                         <td ng-bind="business.charity"></td>
-                        <td>#<span ng-bind="business.hashtag" ng-if="business.hashtag"></span></td>
+                        <td ng-bind="business.hashtag"></td>
 
                         <td><span ng-if="business.timeLeft.weeks"><span ng-bind="business.timeLeft.weeks" ></span> weeks </span><span ng-if="business.timeLeft.days"><span ng-bind="business.timeLeft.days"></span> days </span><span ng-if="business.timeLeft.hours"><span ng-bind="business.timeLeft.hours" ></span> hours </span><span ng-if="business.timeLeft.minutes"><span ng-bind="business.timeLeft.minutes"></span> minutes </span>
 
