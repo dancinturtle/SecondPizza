@@ -16,7 +16,7 @@ donationApp.controller('checkoutCtrl', function ($scope, donationFactory, $windo
       // console.log(data);
       $scope.newCharity = {};
 
-      $location.path('/business');
+      $location.path('/business/2');
     })
   }
 

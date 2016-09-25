@@ -4,7 +4,7 @@ var charities = require('../controllers/charities.js');
 module.exports = function(app){
 
     // Get all users/businesses
-    app.post('/getUsers', function(req, res){
+    app.get('/getAllUsers', function(req, res){
         console.log("Getting users");
         users.index(req, res)
     });

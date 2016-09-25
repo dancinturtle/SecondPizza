@@ -1,11 +1,13 @@
 donationApp.factory('userFactory', function($http){
     // var categories = [{name:'array'}, {name: 'string'}, {name:'binary search tree' }, {name:'singly link list' }];
     var users;
+
     var factory = {};
 
     // get users
-    factory.getUsers = function(callback){
-        $http.post('/getUsers').success(function(output){
+    factory.getAllUsers = function(callback){
+        $http.get('/getAllUsers').success(function(output){
+            console.log("factory all users", output);
             callback(output);
         });
     }
